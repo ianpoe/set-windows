@@ -6,16 +6,16 @@
     <p id="change2"></p>
     <script>
       var site = prompt("enter the url of the website");
-      var tabs = prompt("enter how many windows you want, or type 0 for infinite");
+      var windows = prompt("enter how many windows you want, or type 0 for infinite");
       if (!(site.includes(":"))) {
         site = [site.slice(0, 0), "https://", site.slice(0)].join('')
       }
-      if (i == 0) {
+      if (windows == 0) {
         while (true) {
           window.open(site, "", "height=100,width=100");
         }
       }
-      for (i = 0; i < tabs; i++) {
+      for (i = 0; i < windows; i++) {
         window.open(site, "", "height=100,width=100");
       }
     </script>
