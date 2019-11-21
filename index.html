@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <p id="change"></p>
+    <br/>
+    <p id="change2"></p>
+    <script>
+      var site = prompt("enter the url of the website");
+      var tabs = prompt("enter how many windows you want, or type 0 for infinite");
+      if (!(site.includes(":"))) {
+        site = [site.slice(0, 0), "https://", site.slice(0)].join('')
+      }
+      if (i == 0) {
+        while (true) {
+          window.open(site, "", "height=100,width=100");
+        }
+      }
+      for (i = 0; i < tabs; i++) {
+        window.open(site, "", "height=100,width=100");
+      }
+    </script>
+    <p>if no new windows have opened, it's probably because the website uses http. try putting "http://" at the start of your url.</p>
+    <p>e.g. http://www.example.com</p>
+  </body>
+</html>
